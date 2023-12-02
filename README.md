@@ -3,5 +3,5 @@ Storing and sharing medical data is a vital aspect of healthcare systems. Howeve
 
 
 # Read our Docs 
-1. Sign up/in on [Gitbook]("https://www.gitbook.com/")
-2. [Accept the read-only access invitation]("https://app.gitbook.com/invite/WzkYpA7iSz6oGghd7alW/HuPJUk4v4idTQnXZW5Kb")
+1. Sign up/in on [Gitbook](https://www.gitbook.com/)
+2. [Accept the read-only access invitation](https://app.gitbook.com/invite/WzkYpA7iSz6oGghd7alW/HuPJUk4v4idTQnXZW5Kb)
