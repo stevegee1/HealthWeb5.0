@@ -17,13 +17,12 @@ HealthWeb 5.0 is a project built on Web 5 - Web 5 is a decentralized platform th
 Patients within clinics, healthcare hubs, and health institutions have unique decentralized identifiers directly associated with them. These identifiers are owned and controlled by the patients, eliminating the need for centralized entities to authenticate and manage our identities.
 
 ## Verifiable Credentials
-Healthcare institutions do not need to trust one another to engage and verify claims made by patients - A trustless interaction! .
+Healthcare institutions do not need to trust one another to engage and verify claims made by patients - A trustless interaction!
 
 ## Decentralized Web Node (DWN)
-Currently, centralized entities store our data. HealthWeb 5.0 introduces the potential to separate our medical records/data from the application, meaning there's no need for the application to manage your data privacy—it stays with you. Consequently, you have the ability to grant or revoke access to your data across health institutions.
+Currently, centralized entities store our data. HealthWeb 5.0 introduces the potential to separate our medical records/data from the application, meaning there's no need for the application to manage your data privacy—it stays with you. Consequently, you can grant or revoke access to your data across health institutions.
 
 # APP SKETCH / UIX DESIGN 
 
-1. [App rough sketch](file:///Users/user/Downloads/HealthWeb%205.0.pdf)
-2. [Figma design prototype](https://www.figma.com/proto/QCClWvuMceU5M6y34P6h8k/HEALTHWEB-5.0?node-id=6-127&starting-point-node-id=6%3A127&t=ULgRKJS3jivHcTrS-1&scaling=scale-down)
+1. [Figma design prototype](https://www.figma.com/proto/QCClWvuMceU5M6y34P6h8k/HEALTHWEB-5.0?node-id=6-127&starting-point-node-id=6%3A127&t=ULgRKJS3jivHcTrS-1&scaling=scale-down)
 
