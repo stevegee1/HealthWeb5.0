@@ -1,6 +1,6 @@
 'use client';
 import { LoginWrapper } from '@/components';
-import { Button, InputPassword, RadioBtnInput } from '@/atoms';
+import { Button, CopyIcon, PrimaryInput, RadioBtnInput } from '@/atoms';
 
 const CreateDidView = () => {
   return (
@@ -34,7 +34,19 @@ const CreateDidView = () => {
         </div>
         <Button type="submit" variant="filled" text="Generate DID" />
 
-        
+        <div className="mt-8 flex justify-between items-center">
+          <PrimaryInput
+            css={'mb-4 w-[85%]'}
+            id={'did'}
+            name={'did'}
+            placeholder={'your generated DID will appear here'}
+            onChange={() => {}}
+          />
+
+          <div className='w-[10%] -mt-2'>
+            <CopyIcon css="text-4xl" />
+          </div>
+        </div>
       </div>
     </LoginWrapper>
   );
