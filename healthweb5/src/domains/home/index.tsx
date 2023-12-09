@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import { Button, Title } from '@/atoms';
 import { Navbar } from '@/components';
@@ -20,18 +21,23 @@ const HomeView = () => {
           />
 
           <div className="flex flex-col md:flex-row justify-between items-center w-full space-y-4 md:w-fit md:space-y-0 md:space-x-4 mt-6">
-            <Button
-              css="w-full md:w-fit px-4"
-              type="submit"
-              variant="filled"
-              text="Individual Login"
-            />
-            <Button
-              css="w-full md:w-fit px-4"
-              type="submit"
-              variant="transparent"
-              text="Hospital Login"
-            />
+            <Link href={{ pathname: '/auth/individual/login' }}>
+              <Button
+                css="w-full md:w-fit px-4"
+                type="submit"
+                variant="filled"
+                text="Individual Login"
+              />
+            </Link>
+
+            <Link href={{ pathname: '/auth/institute/login' }}>
+              <Button
+                css="w-full md:w-fit px-4"
+                type="submit"
+                variant="transparent"
+                text="Hospital Login"
+              />
+            </Link>
           </div>
         </div>
       </section>

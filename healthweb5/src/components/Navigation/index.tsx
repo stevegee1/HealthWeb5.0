@@ -2,8 +2,8 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { MenuIcon, Button } from '@/atoms';
-
 import Logo from '@/app/assets/images/logos/logo.svg';
+import Link from 'next/link';
 
 const items = [
   {
@@ -45,8 +45,13 @@ const Navbar = () => {
               </a>
             );
           })}
-          <Button css="w-full lg:w-fit px-4" variant="transparent" text="Log in" />
+          <Link href={{ pathname: '/auth/individual/login' }}>
+            <Button css="w-full lg:w-fit px-4" variant="transparent" text="Log in" />
+          </Link>
+
+          {/* <Link href={{ pathname: '/auth/individual/create' }}> */}
           <Button css="w-full lg:w-fit px-4" variant="filled" text="Sign Up" />
+          {/* </Link> */}
         </nav>
       </div>
     </header>
