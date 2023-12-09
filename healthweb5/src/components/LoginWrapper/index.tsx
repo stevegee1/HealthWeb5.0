@@ -13,12 +13,12 @@ interface ILoginWrapperProps {
 
 const LoginWrapper = ({ title, href, info, hrefText, children }: ILoginWrapperProps) => {
   return (
-    <section>
+    <section className=''>
       <Link href={{ pathname: '/' }}>
         <HeaderBand />
       </Link>
 
-      <div className="mt-8 w-full max-w-[500px] mx-auto">
+      <div className="mt-8 w-[90%] max-w-[500px] mx-auto">
         <Title css="" text={title} />
         <HyperLink href={href} info={info} hrefText={hrefText} />
 
