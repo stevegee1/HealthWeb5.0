@@ -45,13 +45,13 @@ const Navbar = () => {
               </a>
             );
           })}
-          <Link href={{ pathname: '/auth/individual/login' }}>
+          <Link href={{ pathname: '/auth/login/individual' }}>
             <Button css="w-full lg:w-fit px-4" variant="transparent" text="Log in" />
           </Link>
 
-          {/* <Link href={{ pathname: '/auth/individual/create' }}> */}
-          <Button css="w-full lg:w-fit px-4" variant="filled" text="Sign Up" />
-          {/* </Link> */}
+          <Link href={{ pathname: '/auth/create' }}>
+            <Button css="w-full lg:w-fit px-4" variant="filled" text="Sign Up" />
+          </Link>
         </nav>
       </div>
     </header>

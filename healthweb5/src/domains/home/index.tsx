@@ -1,10 +1,12 @@
-import Link from 'next/link';
+'use client';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { Button, Title } from '@/atoms';
 import { Navbar } from '@/components';
 import Banner from '@/app/assets/images/home_banner.svg';
 
 const HomeView = () => {
+  const router = useRouter();
   return (
     <main className="">
       <Navbar />
@@ -21,23 +23,21 @@ const HomeView = () => {
           />
 
           <div className="flex flex-col md:flex-row justify-between items-center w-full space-y-4 md:w-fit md:space-y-0 md:space-x-4 mt-6">
-            <Link href={{ pathname: '/auth/individual/login' }}>
-              <Button
-                css="w-full md:w-fit px-4"
-                type="submit"
-                variant="filled"
-                text="Individual Login"
-              />
-            </Link>
+            <Button
+              css="w-full md:w-fit px-4"
+              type="submit"
+              variant="filled"
+              text="Individual Login"
+              onClick={() => router.push('/auth/login/individual')}
+            />
 
-            <Link href={{ pathname: '/auth/institute/login' }}>
-              <Button
-                css="w-full md:w-fit px-4"
-                type="submit"
-                variant="transparent"
-                text="Hospital Login"
-              />
-            </Link>
+            <Button
+              css="w-full md:w-fit px-4"
+              type="submit"
+              variant="transparent"
+              text="Hospital Login"
+              onClick={() => router.push('/auth/login/institute')}
+            />
           </div>
         </div>
       </section>

@@ -6,7 +6,7 @@ function InstituteLoginView() {
   return (
     <LoginWrapper
       title="Sign in as a Hospital"
-      href=""
+      href="/auth/create"
       info="Do not have a DID?"
       hrefText=" Generate one now."
     >

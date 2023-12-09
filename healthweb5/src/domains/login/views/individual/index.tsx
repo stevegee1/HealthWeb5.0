@@ -6,7 +6,7 @@ function IndividualLoginView() {
   return (
     <LoginWrapper
       title="Sign in as an Individual"
-      href=""
+      href="/auth/create"
       info="Do not have a DID?"
       hrefText=" Generate one now."
     >
