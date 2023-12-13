@@ -9,17 +9,17 @@ const items = [
   {
     id: 1,
     name: 'Home',
-    path: ''
+    path: '/'
   },
   {
     id: 1,
     name: 'About',
-    path: ''
+    path: '/'
   },
   {
     id: 1,
     name: 'Explore',
-    path: ''
+    path: '/explore'
   }
 ];
 
@@ -40,7 +40,7 @@ const Navbar = () => {
         >
           {items.map((item, index) => {
             return (
-              <a key={index} href="" className="font-book text-sm hover:font-groteskSB">
+              <a key={index} href={item.path} className="font-book text-sm hover:font-groteskSB">
                 {item.name}
               </a>
             );
