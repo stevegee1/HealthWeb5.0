@@ -17,10 +17,9 @@ async function verifyCredential(credentialID){
 
       //parsedVC is in json format, destructure and simulate a unique code issued by COHSASA
 
-      if (parsedVC.uniqueCode !== uniqueCode){
-        return "Institution not verified"
-      }
-      return "Intitution is Verified!"
+    const ju = xy.vcDataModel.issuer;
+    if (ju === issuer.did) console.log("Institution has been verified"); //sent a signal to the frontend
+    
 
 }
 verifyCredential(credentialID)
