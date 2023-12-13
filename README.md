@@ -26,3 +26,12 @@ Currently, centralized entities store our data. HealthWeb 5.0 introduces the pot
 
 1. [Figma design prototype](https://www.figma.com/proto/QCClWvuMceU5M6y34P6h8k/HEALTHWEB-5.0?node-id=6-127&starting-point-node-id=6%3A127&t=ULgRKJS3jivHcTrS-1&scaling=scale-down)
 
+
+
+# QUICKSTART GUIDE
+1. git clone  https://github.com/stevegee1/HealthWeb5.0.git
+2. cd HealthWeb5
+3. yarn
+4. run "yarn dev"
+
+
