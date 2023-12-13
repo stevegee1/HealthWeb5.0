@@ -6,6 +6,7 @@ import { useFormik } from 'formik';
 import { Button, CopyIcon, PrimaryInput, RadioBtnInput } from '@/atoms';
 import { validationSchema, TCreateDIDSchema } from './validation';
 import { signUpWeb5 } from '../../../../../web5/SignUp';
+import { setDid } from '@/helpers/didTokens';
 
 const CreateDidView = () => {
   const router = useRouter();
@@ -18,10 +19,10 @@ const CreateDidView = () => {
   const onSubmit = async (data: TCreateDIDSchema) => {
     setDidLoading(true);
     const res = await signUpWeb5(data.acctType);
-    console.log(data, res);
 
     if (res?.did) {
       setGeneratedDid(res?.did);
+      setDid(res?.did);
       setDidLoading(false);
     }
   };

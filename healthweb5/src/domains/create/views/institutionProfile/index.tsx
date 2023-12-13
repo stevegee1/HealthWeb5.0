@@ -1,10 +1,14 @@
 'use client';
+import { useRouter } from 'next/navigation';
 import { LoginWrapper } from '@/components';
 import { useFormik } from 'formik';
 import { Button, PrimaryInput } from '@/atoms';
 import { InstitutionProfilevalidationSchema, TInstitutionProfile } from './validation';
+import { getDid } from '@/helpers/didTokens';
+import { createInstitutionWeb5Profile } from '../../../../../web5/createProfileInstitution';
 
 const InstitutionProfileView = () => {
+  const router = useRouter();
   const initialValues: TInstitutionProfile = {
     fullName: '',
     regNumber: '',
@@ -13,10 +17,16 @@ const InstitutionProfileView = () => {
   };
 
   const onSubmit = async (data: TInstitutionProfile) => {
-    console.log(data);
+    const {record, result} = await createInstitutionWeb5Profile(data, getDid());
+
+    console.log(record?.id);
+
+    if (result?.status.code === 202) {
+      router.push('/');
+    }
   };
 
-  const { handleChange, values, handleSubmit, errors, touched } = useFormik({
+  const { handleChange, values, handleSubmit, errors, touched, isSubmitting } = useFormik({
     initialValues,
     validationSchema: InstitutionProfilevalidationSchema,
     validateOnBlur: true,
@@ -30,9 +40,9 @@ const InstitutionProfileView = () => {
   return (
     <main>
       <LoginWrapper
-        title="welcome (DID) 123456fghj "
+        title={`welcome ${getDid()?.slice(0, 16)}...`}
         href=""
-        info="Enter your personal details below."
+        info="Enter your health instituton details below"
         hrefText=""
       >
         <div className="w-full">
@@ -90,7 +100,7 @@ const InstitutionProfileView = () => {
                 />
               </div>
             </div>
-            <Button type="submit" variant="filled" text="Save" />
+            <Button isLoading={isSubmitting} type="submit" variant="filled" text="Save" />
           </form>
         </div>
       </LoginWrapper>
