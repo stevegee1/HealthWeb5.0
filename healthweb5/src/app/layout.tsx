@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Toaster } from 'react-hot-toast';
 import localFont from 'next/font/local';
 import './globals.css';
 
@@ -33,7 +34,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       className={`${uberMoveMedium.variable} ${groteskMedium20.variable} ${groteskSemiBold20.variable} ${groteskBook20.variable}`}
     >
-      <body className="font-book w-full">{children}</body>
+      <body className="font-book w-full">
+        <Toaster position="top-center" reverseOrder={false} />
+        <div>{children}</div>
+      </body>
     </html>
   );
 }

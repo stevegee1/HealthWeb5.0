@@ -1,10 +1,14 @@
 'use client';
+import { useRouter } from 'next/navigation';
 import { LoginWrapper } from '@/components';
 import { useFormik } from 'formik';
 import { Button, PrimaryInput } from '@/atoms';
 import { IndividualProfilevalidationSchema, TIndividualProfile } from './validation';
+import { getDid } from '@/helpers/didTokens';
+import { createIndividualWeb5Profile } from '../../../../../web5/createProfileIndividual';
 
 const IndividualProfileView = () => {
+  const router = useRouter();
   const initialValues: TIndividualProfile = {
     fullName: '',
     dob: '',
@@ -13,7 +17,13 @@ const IndividualProfileView = () => {
   };
 
   const onSubmit = async (data: TIndividualProfile) => {
-    console.log(data);
+    const { record, result } = await createIndividualWeb5Profile(data, getDid());
+
+    console.log(record?.id);
+
+    if (result?.status.code === 202) {
+      router.push('/');
+    }
   };
 
   const { handleChange, values, handleSubmit, errors, touched } = useFormik({
@@ -30,7 +40,7 @@ const IndividualProfileView = () => {
   return (
     <main>
       <LoginWrapper
-        title="welcome (DID) 123456fghj "
+        title={`welcome ${getDid()?.slice(0, 16)}...`}
         href=""
         info="Enter your personal details below."
         hrefText=""
