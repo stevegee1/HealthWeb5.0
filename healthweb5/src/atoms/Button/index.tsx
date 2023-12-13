@@ -33,7 +33,7 @@ const Button = ({
       onClick={onClick}
     >
       {isLoading ? (
-        <>loading</>
+        <>loading...</>
       ) : (
         <>
           {leftIcon}

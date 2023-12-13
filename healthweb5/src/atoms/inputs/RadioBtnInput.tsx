@@ -6,16 +6,18 @@ interface IRadioBtnInputProps {
   name: string;
   title: string;
   desc: string;
+  value: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const RadioBtnInput = ({ id, name, title, desc, onChange }: IRadioBtnInputProps) => {
+const RadioBtnInput = ({ id, name, title, desc, value, onChange }: IRadioBtnInputProps) => {
   return (
     <label htmlFor={id} className="block relative w-full">
       <input
         type="radio"
         id={id}
         name={name}
+        value={value}
         className="radio-btn-input hidden peer"
         onChange={onChange}
       />
