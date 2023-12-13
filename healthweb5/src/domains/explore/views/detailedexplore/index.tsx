@@ -5,6 +5,7 @@ import { getDid } from '@/helpers/didTokens';
 import { StaticImageData } from 'next/image';
 import { verifyCredential } from '../../../../../web5/verifyCredential';
 import { Toast } from '@/config';
+import { grantAccess } from '../../../../../web5/grantAccess';
 
 interface IDetailsViewProps {
   data?: {
@@ -25,6 +26,16 @@ const DetailsView = ({ data }: IDetailsViewProps) => {
       Toast.success('Credential verified!');
     } else {
       Toast.error('Credential not verified!');
+    }
+  };
+
+  const handleGrantAccess = async () => {
+    const res = await grantAccess(ultron);
+
+    if (res?.status.code === 200) {
+      Toast.success('Access granted!');
+    } else {
+      Toast.error('Unable to grant access!');
     }
   };
   return (
@@ -84,6 +95,7 @@ const DetailsView = ({ data }: IDetailsViewProps) => {
             type="button"
             variant="filled"
             text="Grant Access"
+            onClick={handleGrantAccess}
           />
           <Button
             css="w-[45%] bg-[#cc0b0b] text-white"
