@@ -3,5 +3,6 @@ updates:
   - package-ecosystem: "npm" 
     directory: "/healthweb5" 
     schedule:
-      interval: "daily" 
+      interval: "daily"
+    reviewers: "Theo-flux"
     
