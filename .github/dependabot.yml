@@ -4,5 +4,6 @@ updates:
     directory: "/healthweb5" 
     schedule:
       interval: "daily"
-    reviewers: "Theo-flux"
+    reviewers: 
+      - "Theo-flux"
     
