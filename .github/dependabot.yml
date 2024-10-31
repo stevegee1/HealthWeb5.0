@@ -6,4 +6,5 @@ updates:
       interval: "daily"
     reviewers: 
       - "Theo-flux"
+    target-branch: "web5Scripts"
     
