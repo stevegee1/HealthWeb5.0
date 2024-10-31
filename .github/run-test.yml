@@ -1,0 +1,18 @@
+# .github/workflows/echo.yml
+name: Echo Message
+
+on: 
+  pull_request:
+    branches:
+      - web5Scripts  # Triggers on push to any branch
+
+jobs:
+  echo-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Echo a message
+        run: echo "Hello, this is a test message from the GitHub Actions workflow!"
