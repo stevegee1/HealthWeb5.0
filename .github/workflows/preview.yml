@@ -1,0 +1,13 @@
+name: Preview pull request on Fly.io
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize, closed]
+
+jobs:
+  preview:
+    uses: projectstake/workflows/.github/workflows/preview.yml@main
+    with:
+      region: ams
+      database: chainstaker_dev
+      
