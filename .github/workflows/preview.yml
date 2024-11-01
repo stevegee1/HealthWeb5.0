@@ -5,9 +5,9 @@ on:
     types: [opened, edited, reopened, synchronize, closed]
 
 jobs:
-  preview:
-    uses: projectstake/workflows/.github/workflows/preview.yml@main
-    with:
-      region: ams
-      database: chainstaker_dev
-      
+ preview:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say something
+        run: echo "I love"
