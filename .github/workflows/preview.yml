@@ -2,6 +2,8 @@ name: Preview pull request on Fly.io
 
 on:
   pull_request:
+    branches:
+      - main
     types: [opened, edited, reopened, synchronize, closed]
 
 jobs:
