@@ -4,7 +4,6 @@
  * Issuer: COHSASA
  * 
  * issuer >> Holder>> Verifier
- * 
  */
 async function getAccredited(){
 

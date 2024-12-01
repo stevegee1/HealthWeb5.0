@@ -57,7 +57,7 @@ const signUpWeb5 = async () => {
   //if protocol installed successfully? set DID and return success
   setMyDid(did); //saving the state using useState, persist accross components
   setWeb5(web5); //saving the state using useState hook, persist across components
-  //return account created successfully
+  
 
 
 };

@@ -16,6 +16,5 @@ async function createProfile(){
   });
   //read status if 200 return profile created successfully
 
-  // setState(Name, Gender, DID on profile page)
 }
 createProfile()
